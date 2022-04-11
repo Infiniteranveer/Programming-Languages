@@ -1,21 +1,19 @@
 /*
     Type Conversion
-
     Numeric Primitive casting  
-
     Numeric primitive casting can be cast in two ways.
-    Explicit Casting has to be done when the source type kas larger range than the target type 
+    Implicit casting happens when the source type has smaller range then the target type .
 */ 
 public class data {
     public static void main(String[] args)
     {
-        //Explicit casting 
-        double doubleVar = 42.0d ;
-        float floatVar = (float) doubleVar;
-        long longVar = (long) floatVar;
-        int intVar = (int) longVar;
-        short shortVar = (short) intVar;
-        byte byteVar = (byte) shortVar;
+        //Implicit casting 
+        byte byteVar = 42;
+        short shortVar = byteVar;
+        int intVar = shortVar;
+        long longVar = intVar;
+        float floatVar = longVar;
+        double doubleVar = floatVar;
         System.out.print("\n\tbyte = " +byteVar);
         System.out.print("\n\tshort = " +shortVar);
         System.out.print("\n\tint = " +intVar);
